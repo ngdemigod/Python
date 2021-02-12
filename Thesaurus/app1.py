@@ -1,4 +1,10 @@
-import typing_extensions
+import json
 
+data = json.load(open("data.json"))
 
-typing_extensions
+def lookup(w):
+    return data[w]
+
+word = input("Enter Word: ")
+
+print(lookup(word))
